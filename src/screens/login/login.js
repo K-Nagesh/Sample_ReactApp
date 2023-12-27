@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsToggle2Off } from "react-icons/bs";
-import "./loginStyles.css";
+import "../signUp/signupStyles.css";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
@@ -20,40 +20,25 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <div className="content">
-        <h1>{"Welcome back"}</h1>
-
-        <div className="toggle">
-          <p>{"Don't have an account? Click here →"}</p>
-          <BsToggle2Off className="toggle-icon" />
-        </div>
-
-        <div className="formContainer">
-          <form>
-            <input
-              type="text"
-              placeholder="user name"
-              value={userName}
-              onChange={userName_Changing}
-              className="inputField"
-            />
-            <br />
-            <input
-              type="password"
-              placeholder="password"
-              value={password}
-              onChange={password_Changing}
-              ref={passwordRef}
-              className="inputField"
-            />
-            <br />
-          </form>
-        </div>
-
-        <button className="btn">{"LOG IN"}</button>
+    <form class="form-signin">
+      <h2>Sign In</h2>
+      <div class="input-container">
+        <label for="signin-username">Username</label>
+        <input type="text" id="signin-username" required/>
+        <i class="fa-regular fa-user"></i>
       </div>
-    </div>
+
+      <div class="input-container">
+        <label for="signin-password">Password</label>
+        <input type="password" id="signin-password" required/>
+        <i class="fa-solid fa-lock"></i>
+      </div>
+
+      <div class="input-container">
+        <input type="submit" value={'Login'}/>
+      </div>
+      <p>Not Registered? <a href="#" class="create">Create</a></p>
+    </form>
   );
 };
 
