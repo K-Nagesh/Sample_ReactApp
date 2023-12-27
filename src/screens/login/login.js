@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsToggle2Off } from "react-icons/bs";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../signUp/signupStyles.css";
 
 const Login = () => {
@@ -20,25 +21,29 @@ const Login = () => {
   };
 
   return (
-    <form class="form-signin">
+
+    <div className="container">
+    <form className="form-signin">
       <h2>Sign In</h2>
-      <div class="input-container">
+      <div className="input-container">
         <label for="signin-username">Username</label>
         <input type="text" id="signin-username" required/>
-        <i class="fa-regular fa-user"></i>
+        <i className="fa-regular fa-user"></i>
       </div>
 
-      <div class="input-container">
+      <div className="input-container">
         <label for="signin-password">Password</label>
         <input type="password" id="signin-password" required/>
-        <i class="fa-solid fa-lock"></i>
+        <i className="fa-solid fa-lock"></i>
       </div>
 
-      <div class="input-container">
+      <div className="input-container">
         <input type="submit" value={'Login'}/>
       </div>
-      <p>Not Registered? <a href="#" class="create">Create</a></p>
+      <p>Not Registered? <a href="#" className="create">Create</a></p>
     </form>
+    </div>
+
   );
 };
 

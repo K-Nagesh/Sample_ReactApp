@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsToggle2Off } from "react-icons/bs";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./signupStyles.css";
 
 const SignUp = () => {
