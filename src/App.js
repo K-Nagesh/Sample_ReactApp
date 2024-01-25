@@ -1,7 +1,6 @@
 // App.js
 import React from 'react';
-import './App.css';
-import DashboardPage from './pages/dashboardPage';
+import Login from './screens/login/login';
 
 function App() {
   const templateStyles = 'templateContainerStyle';
