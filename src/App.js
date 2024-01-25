@@ -5,8 +5,7 @@ import DashboardPage from './pages/dashboardPage';
 
 function App() {
   const templateStyles = 'templateContainerStyle';
-
-  return (
+  return (   
     <div className="App">
       <DashboardPage />
     </div>
